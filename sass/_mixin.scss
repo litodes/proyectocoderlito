@@ -1,0 +1,13 @@
+/* Mixins */
+
+@mixin flex($display, $ai, $jc) {
+    display: $display;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+@mixin titulos($ti, $padding, $color) {
+    text-align: $ti;
+    padding: $padding;
+    color: $color;
+}

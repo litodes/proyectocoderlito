@@ -1,0 +1,99 @@
+@import "variables";
+@import "mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo */
+
+body {
+    background: $BackgroundColor;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Logo y titulo */
+
+@keyframes rotar_logo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header__title {
+    @include flex(flex, center, center);
+
+    .header__logo {
+        width: 10%;
+        animation-name: rotar_logo;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+/*Tipografías y colores*/
+
+h1 {
+    letter-spacing: 10px;
+}
+
+h1,
+h2 {
+    @include titulos(center, 30px 10px, $TitlesColor)
+}
+
+label,
+h4,
+p {
+    color: $TextColor;
+}
+
+.highlight {
+    color: #fcbf1e;
+}
+
+/*Articulos y secciones*/
+
+.item {
+    width: 20vw;
+    border: 5px outset #fcbf1e;
+}
+
+.review {
+    @include flex(flex, center, center);
+    padding: 20px;
+}
+
+.aside__advertisement {
+    width: 40vw;
+    padding: 20px;
+}
+
+#testimonials {
+    text-align: center;
+    color: #fff;
+
+    .testimonial-image {
+        width: 10%;
+        margin: 20px;
+    }
+}
+
+footer {
+    display: inline-block;
+    text-align: center;
+    padding: 50px;
+    background: #035aa6;
+    width: 100%;
+
+    .fab {
+        color: white;
+    }
+}
